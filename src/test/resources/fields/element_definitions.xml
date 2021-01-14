@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../fields/xsd/element_rules.xsd">
+    <Page name="Главная страница">
+        <Collection name="Главное меню" locator=".//ul[@class='main-menu']/li" isLoaded="true">
+            <Button name="Категория" locator="./a"/>
+        </Collection>
+        <Collection name="Подменю" locator=".//a[@class='menu-link main-menu__link']" isLoaded="true">
+            <Button name="Услуга" locator="."/>
+        </Collection>
+    </Page>
+    <Page name="Ипотека на вторичное жилье">
+        <Button name="Оставить заявку" locator=".//div[@class='b-intro__block-buttons']/a[@class='button']"
+                isLoaded="true"/>
+    </Page>
+    <Page name="Оформление ипотеки">
+        <TextInput name="Введите e-mail" locator="//*[@name='email']"/>
+        <TextInput name="Фамилия" locator="//*[@name='lastName']"/>
+        <TextInput name="Имя" locator="//*[@name='firstName']"/>
+        <TextInput name="Отчество" locator="//*[@name='middleName']"/>
+        <TextInput name="Дата рождения" locator="//*[@name='birthDate']"/>
+        <TextInput name="Место рождения" locator="//*[@name='birthPlace']"/>
+        <TextInput name="Серия и номер паспорта" locator="//*[@name='passport']"/>
+        <TextInput name="Код подразделения" locator="//*[@name='unitCode']"/>
+        <TextInput name="Дата выдачи" locator="//*[@name='issuedDate']"/>
+        <TextInput name="Кем выдан" locator="//*[@name='issuedBy']"/>
+        <TextInput name="Адрес регистрации" locator="//*[@name='registrationAddress']"/>
+        <TextInput name="Ежемесячный доход" locator="//*[@name='salary']"/>
+        <Collection name="Пол" locator=".//label[@class='sc-fYiAbW dIaePx']">
+            <Button name="Гендер" locator="//input" isLoaded="true"/>
+        </Collection>
+        <StaticText name="Ошибка" locator=".//div[@data-marker='Fieldset.value.Error']"/>
+        <ComboBox name="Подтверждение дохода" locator=".//div[@class='sc-GMQeP fDqqlg']"/>
+        <Button name="Продолжить" locator=".//button[@type='submit']"/>
+    </Page>
+</Pages>
